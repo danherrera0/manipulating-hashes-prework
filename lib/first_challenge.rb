@@ -1,3 +1,5 @@
+require 'pry'
+
 def first_challenge
   contacts = {
     "Jon Snow" => {
@@ -11,12 +13,15 @@ def first_challenge
       email: "freddy@mercury.com",
       favorite_icecream_flavors: ["strawberry", "cookie dough", "mint chip"]
     }
-  }
 
-  #your code here
-contacts.each do |person,data|
-  data.each do |attribute,value|
-    delete_if value == "strawberry"
-    #remember to return your newly altered contacts hash!
-puts contacts
+  }
+new_array = contacts["Freddy Mercury"][:favorite_icecream_flavors]
+new_array.delete_if {|x| x= "strawberry"}
+# end
+# end
+# end
+
+contacts
+
+
 end
